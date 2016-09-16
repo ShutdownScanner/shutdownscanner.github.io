@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>About Shutdown Scanner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A service for automatically monitoring how many computers have been left on out of hours. Reduce your power consumption and save money on your energy bills by measuring your progress.">
+    <meta name="author" content="Shutdown Scanner">
+    <link href="../../site.css" rel="stylesheet">
+    <link rel="../../shortcut icon" href="favicon.ico">
+</head>
+<body>
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="../../index.html">Shutdown Scanner</a>
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        
+                        <li><a href="../../index.html">Home</a></li>
+                        <li class="active"><a href="index.html">About</a></li>
+                        <li><a href="../../home/dashboard/index.html">Dashboard</a></li>
+                        <li><a href="../../blog/index.html">Blog</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </div>
+    </div>
+    <div id="wrap">
+        <div id="main" class="container">
+            <div class="page-header">
+                <h1>Shutdown Scanner<small> monitoring service</small></h1>
+            </div>
+            
+            <p>
+                shutdown scanner was a service for monitoring how many computers have been left on in an office out of hours
+            </p>
+            <h3>How it works</h3>
+            <ul>
+                <li>You download and install a small piece of software onto a server on your network that is always on.</li>
+                <li>The software scans the local network for devices that are powered on and sends the results to us.</li>
+                <li>We process the data in the cloud and show you easy to understand graphs that let you save money.</li>
+            </ul>
+            <br />
+            <p>
+                <a class="btn btn-warning btn-large" href="../../home/dashboard/index.html">See an example dashboard</a>
+            </p>
+            <h3>Why cloud?</h3>
+            <ul>
+                <li>Hosting shutdown scanner online allows us to improve the software and add features without you having to install updates.
+                    <ul>
+                        <li>To achieve the same locally we would have to push updates to your servers (which we think is insecure).</li>
+                        <li>Our download is as simple as possible (with no remote update) as we do most of the work in the cloud.</li>
+                    </ul>
+                </li>
+                <li>If you want a locally hosted version then please sign up to the mailing list.</li>
+                <li>Cloud hosting allows you to access your results from anywhere (e.g. on your phone or tablet).</li>
+            </ul>
+            <h3>Security</h3>
+            <ul>
+                <li>We take security very seriously and work hard to protect your data.</li>
+                <li>All of our connections use encryption (<a href="https://en.wikipedia.org/wiki/HTTP Secure">HTTPS</a>) and our systems are firewalled.</li>
+                <li>We securely hash your password with a strong one way function (<a href="https://en.wikipedia.org/wiki/PBKDF2">PBKDF2</a>).</li>
+                <li>We have a <a href="https://www.ssllabs.com/ssltest/analyze.html?d=shutdownscanner.com">good rating at SSL Labs</a> and use a 4096 bit RSA certificate.</li>
+            </ul>
+            <hr />
+            <h3>Dashboard</h3>
+            <p>
+                This is the main graph on your dashboard. The horizontal axis shows time and the vertical axis shows the total number of computers on. The daytime peaks are easy to see.
+            </p>
+            <img src="../../dashboardCroppedActual.png" alt="My Dashboard Screenshot" />
+            <hr />
+            <h3 id="digital-sign">Digital Signage</h3>
+            <p>
+                This is the live graph, which auto updates. It's perfect for having on a digital sign.
+                For a guide on how to make a digital sign with a Raspberry Pi see this <a href="/Blog/Posts/Raspberry-Pi-Digital-Sign">blog post</a>.
+            </p>
+            <img src="../../liveGraphSmall.png" alt="Live Auto-updating Graph" />
+        </div>
+    </div>
+    <!-- /container -->
+    <footer class="footer">
+        <p><strong>&copy; Shutdown Scanner 2016</strong></p>
+        <ul class="footer-links">
+            <li class="muted">&diams;</li>
+            <li><a href="/">Home</a></li>
+            <li class="muted">&diams;</li>
+            <li class="active"><a href="/Home/About">About</a></li>
+            <li class="muted">&diams;</li>
+            <li><a href="/Home/Dashboard">Dashboard</a></li>
+            <li class="muted">&diams;</li>
+            <li><a href="/Blog">Blog</a></li>
+            <li class="muted">&diams;</li>
+        </ul>
+    </footer>
+</body>
+</html>

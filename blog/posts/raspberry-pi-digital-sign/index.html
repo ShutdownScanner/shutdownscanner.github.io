@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Shutdown Scanner Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A service for automatically monitoring how many computers have been left on out of hours. Reduce your power consumption and save money on your energy bills by measuring your progress.">
+    <meta name="author" content="Shutdown Scanner">
+    <link href="../../../site.css" rel="stylesheet">
+    <link rel="../../../shortcut icon" href="favicon.ico">
+</head>
+<body>
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="../../../index.html">Shutdown Scanner</a>
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        
+                        <li><a href="../../../index.html">Home</a></li>
+                        <li><a href="../../../home/about/index.html">About</a></li>
+                        <li><a href="../../../home/dashboard/index.html">Dashboard</a></li>
+                        <li class="active"><a href="../../index.html">Blog</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </div>
+    </div>
+    <div id="wrap">
+        <div id="main" class="container">
+            <h1>Raspberry Pi Digital Sign</h1>
+            <br />
+            <p>
+                Here's a quick way to setup a Raspberry Pi for use as a digital sign displaying a webpage on a big screen.
+                It's very well suited for this purpose but there are a few idiosyncrasies such as screen blanking, cursor hiding, colour depth and power failure recovery. 
+                Hopefully this will save you some time as these have already been fixed below.
+            </p>
+            <h2>How To</h2>
+            <p>
+                Download the latest Raspbian image from the <a href="https://www.raspberrypi.org/downloads/">official website</a> and write it to an SD card.
+            </p>
+            <p>
+                Boot up the Pi and setup the following in the config menu on 1st boot:
+            </p>
+            <ul>
+                <li>Disable overscan</li>
+                <li>Enable SSH</li>
+                <li>Change the password</li>
+                <li>Make the desktop start at boot</li>
+            </ul>
+            <p>
+                Start the desktop and connect to any wireless networks if required.
+            </p>
+            <p>
+                Update and install the software by typing the following at the terminal:
+            </p>
+<pre>
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install unclutter
+sudo apt-get install x11-xserver-tools
+sudo apt-get install chromium-browser
+</pre>
+            <p>
+                Create the file “/boot/digitalsign” with the following contents:
+            </p>
+<pre>
+sleep 30s
+chromium --incognito --kiosk https://shutdownscanner.com/home/dashboard/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+</pre>
+            
+            <p>
+                Set the URL to the page that you want to display and make the file executable with "chmod".
+                To use this to display your shutdown graph replace the URL with the link found on your dashboard.
+            </p>
+            <p>
+                The sleep is to allow Wi-Fi and DNS to start up, incognito stops chromium complaining about a bad shutdown.
+                Putting it in boot allows modification on the FAT partition from another OS by mounting the SD card.
+            </p>
+            
+            <p>
+                Make the “/etc/xdg/lxsession/LXDE/autostart” file look like the following:
+            </p>
+<pre>
+@lxpanel --profile LXDE
+@pcmanfm --desktop --profile LXDE
+@unclutter
+@xset s off
+@xset -dpms
+@xset s noblank
+@/boot/digitalsign
+</pre>
+            <p>This hides the cursor, stops the screen going blank and launches the browser script.</p>
+            
+            <p>Depending on what you are displaying, you may need to enable 32bit colour by adding the following to /boot/config.txt:</p>
+<pre>
+framebuffer_depth=32
+framebuffer_ignore_alpha=1
+</pre>
+            <p>
+                If performance is an issue then the Pi can be overclocked or use the default browser (<a href="http://wiki.xfce.org/midori/faq#kiosk_mode">Midori</a>) which is more lightweight.
+            </p>
+            <p>
+                You can install x11vnc if you want graphical remote access. This is better than other VNC servers as you can connect to the session that is output to the screen.
+            </p>
+            <p>
+                You may need to disable overscan on the TV if possible (otherwise re-enable it on the Pi). Different brands have their own names for this e.g. "Just Scan".
+            </p>
+        </div>
+    </div>
+    <!-- /container -->
+    <footer class="footer">
+        <p><strong>&copy; Shutdown Scanner 2016</strong></p>
+        <ul class="footer-links">
+            <li class="muted">&diams;</li>
+            <li><a href="/">Home</a></li>
+            <li class="muted">&diams;</li>
+            <li><a href="/Home/About">About</a></li>
+            <li class="muted">&diams;</li>
+            <li><a href="/Home/Dashboard">Dashboard</a></li>
+            <li class="muted">&diams;</li>
+            <li class="active"><a href="/Blog">Blog</a></li>
+            <li class="muted">&diams;</li>
+        </ul>
+    </footer>
+</body>
+</html>
