@@ -1,0 +1,67 @@
+==================================================================
+https://keybase.io/jps
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://shutdownscanner.com
+  * I am jps (https://keybase.io/jps) on keybase.
+  * I have a public key with fingerprint 0B36 EF94 5256 9BE6 A807  F0B1 B0F0 6B84 CCD6 D81B
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "0b36ef9452569be6a807f0b1b0f06b84ccd6d81b",
+            "host": "keybase.io",
+            "key_id": "b0f06b84ccd6d81b",
+            "kid": "01010ff42d357699915a15ac8eab9a5e0872f77ae872f20ec6c290ccc83ed8cbadbe0a",
+            "uid": "62b07f77487dc134f72a1c9883ec8619",
+            "username": "jps"
+        },
+        "service": {
+            "hostname": "shutdownscanner.com",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1426436544,
+    "expire_in": 157680000,
+    "prev": "19d9e7e6a7d7e6db4b5b8b43cf0d57bc43342dbed36bf6adb1fa2a8fbede7ae2",
+    "seqno": 9,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.8
+Comment: https://keybase.io/crypto
+
+yMIfAnicbVJdSFRBFN41tVqV9CEtyn4uRUWr3r+9P7spqRH9IGilQgjLzNy5el29
+d9t7XROzyCjJNKEofNAk6WHxqTCKikqzkgj/CpEoJH0oSC1QQymk5oq9NTPMYc75
+zjfnfJyXCascLmda4/WRO91DTc63vblVjsKYez21FDSUGspbSwXwslE1vRSHgiFN
+tygvRUNOwKrMe1iPIEMsAIkWVRoykFZpAUo8QoqgSAyk3FSZYdoZhAYCE6drBvGR
+h19TiPc/+MBygGbIVlWeVTiPKMiyzHgAOUjCAMrAg2lJZFVRBNi2LI2RgFiZRghJ
+HFYkBIECMQ0IXdUyncBCUqAo8pKoIIbjVZEFDJIlgkaSwMg20MQhHVRigi4PmlSd
+myKOsIaw3b3dxErQLKuyFKNaNxHQdRxKR0YlyQ6GDMtARgUBlFlW0PTaBFZN0M6o
+xtC/wuWHmq4QJUlGGIdMzdApL0OQyNJscoZnBZ4TPDzvpvDpoBbCfs1GEAkkmiz7
+HxwmlIysyFgkuosKuRXIQw+UIM8hlVY8IkQ8xxHpIFY4AaoCEYNRAQsklXgwEY2l
+7O5O6QbllUmZoNTuSyvVgVUVwlTdi56SaIfT5YiNibJnweFam/hvQg5lr15KTtkb
+mM25OBj5UnC0XLvQdTCnM7Hj7PHqaL5hQPbfzihEu776lhYDWamR+xO6O30oKd85
+/HPi9Y6OnMqpvui43Qtpz5qGk49UHBjxbYpqW9qy2BzO+9xlfroZ5prruUjc8OXZ
+yE4r9cO54sz5wSmj7lXOQiKA061tc9+HPo7NzOj177IyYzZ0dvsmJ0tiTxStf75H
+m+uLzr0qtF4quvs4782E0N1L1518yJaNH86MT3CNXktwxLY35kXec99+iRkbZyuy
+szY7i+OftPa3NxU8Kpg5c8M3eB4ckx641zX0T+9oym9Yk/J0dD5p25Wk5q2+sd/7
+9o//ifoRhW9tH2hp+QuQziod
+=NX1C
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jps
+
+==================================================================
